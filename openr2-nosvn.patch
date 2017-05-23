@@ -1,0 +1,13 @@
+--- openr2-1.3.2/src/Makefile.am.orig	2011-10-10 07:40:32.000000000 +0200
++++ openr2-1.3.2/src/Makefile.am	2017-05-23 21:45:49.228777613 +0200
+@@ -3,10 +3,6 @@
+ AM_CFLAGS += -DOR2_TRACE_STACKS
+ endif
+ 
+-if HAVE_SVNVERSION
+-AM_CFLAGS += -DREVISION=\"$(shell svnversion -n .)\"
+-endif
+-
+ lib_LTLIBRARIES = libopenr2.la
+ 
+ include_HEADERS = openr2/openr2.h 
