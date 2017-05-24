@@ -6,7 +6,7 @@ Summary:	OpenR2 - MFC/R2 signalling over E1 lines
 Summary(pl.UTF-8):	OpenR2 - sygnały MFC/R2 po liniach E1
 Name:		openr2
 Version:	1.3.2
-Release:	1
+Release:	2
 License:	LGPL v2+ (library), GPL v2+ (utilities)
 Group:		Libraries
 #Source0Download: https://github.com/moises-silva/openr2/releases
@@ -14,6 +14,7 @@ Source0:	https://github.com/moises-silva/openr2/archive/v%{version}/%{name}-%{ve
 # Source0-md5:	5858020ad014c111f6f7a8c86758da6c
 Patch0:		%{name}-nosvn.patch
 Patch1:		%{name}-opt.patch
+Patch2:		%{name}-libdir.patch
 URL:		https://libopenr2.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -59,6 +60,7 @@ Statyczna biblioteka OpenR2.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__libtoolize}
